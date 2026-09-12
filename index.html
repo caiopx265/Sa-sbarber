@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sal's Barbershop | Nashville, TN</title>
+  <meta name="description" content="Classic cuts, modern style. Professional barbering in Nashville, TN. Walk-ins welcome." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0b0d10',
+            panel: '#12161b',
+            barberRed: '#d62828',
+            barberBlue: '#1d4ed8',
+            warmWhite: '#f8f7f3'
+          },
+          fontFamily: {
+            display: ['Arial Black', 'Impact', 'sans-serif'],
+            body: ['Inter', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 30px rgba(214,40,40,.18)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#0b0d10; }
+    .grain {
+      background-image:
+        radial-gradient(rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(7,9,11,.94) 0%, rgba(7,9,11,.74) 45%, rgba(7,9,11,.20) 100%),
+        linear-gradient(0deg, rgba(7,9,11,.65) 0%, transparent 55%);
+    }
+    .barber-line {
+      background: linear-gradient(90deg,#d62828 0 33%,#f8f7f3 33% 66%,#1d4ed8 66% 100%);
+    }
+    .service-card:hover { transform: translateY(-6px); }
+    .service-card { transition: .25s ease; }
+  </style>
+</head>
+<body class="text-warmWhite font-body grain">
+
+  <!-- Top accent -->
+  <div class="h-1 barber-line"></div>
+
+  <!-- Header -->
+  <header class="fixed top-1 inset-x-0 z-50 bg-ink/85 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-full border-2 border-barberRed grid place-items-center font-display text-sm">
+          SAL'S
+        </div>
+        <div>
+          <div class="font-display text-xl tracking-wide">SAL'S BARBERSHOP</div>
+          <div class="text-xs text-white/50 -mt-1">NASHVILLE, TENNESSEE</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm text-white/75">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#gallery" class="hover:text-white">Gallery</a>
+        <a href="#location" class="hover:text-white">Location</a>
+      </nav>
+
+      <a href="#book" class="bg-barberRed hover:bg-red-700 px-5 py-3 rounded-md font-semibold transition shadow-glow">
+        Book Now
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=85"
+      alt="Modern barbershop interior"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 md:px-8 pt-28 pb-20 w-full">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 border border-white/15 bg-black/25 backdrop-blur px-4 py-2 rounded-full text-sm text-white/75 mb-7">
+          <span class="w-2 h-2 rounded-full bg-barberRed"></span>
+          Walk-ins welcome · Monday–Saturday
+        </div>
+
+        <p class="uppercase tracking-[.35em] text-sm text-white/60 mb-3">Nashville, TN</p>
+        <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[.95] uppercase">
+          Classic Cuts.<br>
+          <span class="text-barberRed">Modern Style.</span>
+        </h1>
+
+        <p class="mt-6 text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
+          Precision barbering, clean fades, sharp beard work and a welcoming shop experience right here in Nashville.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#book" class="bg-barberRed hover:bg-red-700 px-7 py-4 rounded-md font-bold text-center transition shadow-glow">
+            BOOK YOUR APPOINTMENT
+          </a>
+          <a href="#services" class="border border-white/20 hover:border-white/45 px-7 py-4 rounded-md font-bold text-center transition bg-black/20">
+            VIEW SERVICES
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-5 max-w-3xl">
+          <div>
+            <div class="text-2xl font-display">5.0★</div>
+            <div class="text-xs text-white/45 uppercase tracking-wider">Customer Rating</div>
+          </div>
+          <div>
+            <div class="text-2xl font-display">250+</div>
+            <div class="text-xs text-white/45 uppercase tracking-wider">Reviews</div>
+          </div>
+          <div>
+            <div class="text-2xl font-display">9–6</div>
+            <div class="text-xs text-white/45 uppercase tracking-wider">Mon–Sat</div>
+          </div>
+          <div>
+            <div class="text-2xl font-display">Walk-In</div>
+            <div class="text-xs text-white/45 uppercase tracking-wider">Friendly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="max-w-2xl mb-12">
+        <p class="text-barberRed uppercase tracking-[.3em] text-sm font-semibold">Services</p>
+        <h2 class="font-display text-4xl md:text-6xl uppercase mt-2">Keep It Sharp</h2>
+        <p class="text-white/55 mt-4">Straightforward barbering services with clean execution and attention to detail.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <article class="service-card bg-panel border border-white/10 rounded-xl p-7">
+          <div class="text-barberRed text-sm font-bold mb-8">01</div>
+          <h3 class="font-display text-2xl uppercase">Haircut</h3>
+          <p class="text-white/50 mt-3 text-sm leading-relaxed">Clean, tailored cut finished to match your style.</p>
+          <div class="mt-8 pt-5 border-t border-white/10 flex justify-between">
+            <span class="text-white/45">From</span><strong>$40</strong>
+          </div>
+        </article>
+
+        <article class="service-card bg-panel border border-white/10 rounded-xl p-7">
+          <div class="text-barberBlue text-sm font-bold mb-8">02</div>
+          <h3 class="font-display text-2xl uppercase">Beard Trim</h3>
+          <p class="text-white/50 mt-3 text-sm leading-relaxed">Shape, line and refine your beard for a polished look.</p>
+          <div class="mt-8 pt-5 border-t border-white/10 flex justify-between">
+            <span class="text-white/45">From</span><strong>$25</strong>
+          </div>
+        </article>
+
+        <article class="service-card bg-panel border border-white/10 rounded-xl p-7">
+          <div class="text-barberRed text-sm font-bold mb-8">03</div>
+          <h3 class="font-display text-2xl uppercase">Cut + Beard</h3>
+          <p class="text-white/50 mt-3 text-sm leading-relaxed">The full package for a complete refresh in one visit.</p>
+          <div class="mt-8 pt-5 border-t border-white/10 flex justify-between">
+            <span class="text-white/45">From</span><strong>$50</strong>
+          </div>
+        </article>
+
+        <article class="service-card bg-panel border border-white/10 rounded-xl p-7">
+          <div class="text-barberBlue text-sm font-bold mb-8">04</div>
+          <h3 class="font-display text-2xl uppercase">Head Shave</h3>
+          <p class="text-white/50 mt-3 text-sm leading-relaxed">Smooth, precise shave with optional hot towel finish.</p>
+          <div class="mt-8 pt-5 border-t border-white/10 flex justify-between">
+            <span class="text-white/45">From</span><strong>$40</strong>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-white/[.025] border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <img
+          src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=85"
+          alt="Barber at work"
+          class="rounded-2xl w-full aspect-[4/3] object-cover"
+        />
+        <div class="absolute -bottom-6 -right-3 md:right-8 bg-barberRed px-6 py-5 rounded-xl shadow-2xl">
+          <div class="font-display text-2xl">NASHVILLE</div>
+          <div class="text-sm text-white/75">Local barbershop experience</div>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-barberRed uppercase tracking-[.3em] text-sm font-semibold">About Sal's</p>
+        <h2 class="font-display text-4xl md:text-6xl uppercase mt-2">A Better Shop Experience</h2>
+        <p class="text-white/60 mt-5 leading-relaxed">
+          Sal's Barbershop combines classic barbering with a clean, modern environment. From everyday cuts to detailed beard work, the focus is simple: consistency, precision and service that keeps you coming back.
+        </p>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-5">
+          <div class="border-l-2 border-barberRed pl-4">
+            <h3 class="font-bold">Walk-ins Welcome</h3>
+            <p class="text-sm text-white/45 mt-1">Drop in during business hours.</p>
+          </div>
+          <div class="border-l-2 border-barberBlue pl-4">
+            <h3 class="font-bold">Clean & Modern</h3>
+            <p class="text-sm text-white/45 mt-1">Comfortable space, sharp atmosphere.</p>
+          </div>
+          <div class="border-l-2 border-barberBlue pl-4">
+            <h3 class="font-bold">Precision Work</h3>
+            <p class="text-sm text-white/45 mt-1">Attention to detail on every service.</p>
+          </div>
+          <div class="border-l-2 border-barberRed pl-4">
+            <h3 class="font-bold">Easy Booking</h3>
+            <p class="text-sm text-white/45 mt-1">Reserve online or stop by the shop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+        <div>
+          <p class="text-barberRed uppercase tracking-[.3em] text-sm font-semibold">Gallery</p>
+          <h2 class="font-display text-4xl md:text-6xl uppercase mt-2">Fresh Work</h2>
+        </div>
+        <p class="text-white/45 max-w-lg text-sm">
+          Demo images shown for concept purposes. Final site can use Sal's approved real shop and haircut photos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <img class="rounded-xl aspect-square object-cover" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=80" alt="Haircut detail">
+        <img class="rounded-xl aspect-square object-cover" src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=900&q=80" alt="Barber work">
+        <img class="rounded-xl aspect-square object-cover" src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=900&q=80" alt="Barbershop chair">
+        <img class="rounded-xl aspect-square object-cover" src="https://images.unsplash.com/photo-1593702288056-fdeca30c1f71?auto=format&fit=crop&w=900&q=80" alt="Barber cutting hair">
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-24 bg-white/[.025] border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <p class="text-barberRed uppercase tracking-[.3em] text-sm font-semibold">Reputation</p>
+      <h2 class="font-display text-4xl md:text-6xl uppercase mt-2">Built on Great Service</h2>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-10">
+        <blockquote class="bg-panel border border-white/10 rounded-xl p-7">
+          <div class="text-yellow-400 tracking-widest">★★★★★</div>
+          <p class="mt-4 text-white/65">“Great experience, clean shop and a sharp cut. Exactly what I was looking for.”</p>
+          <footer class="mt-5 text-sm text-white/35">Demo review placeholder</footer>
+        </blockquote>
+        <blockquote class="bg-panel border border-white/10 rounded-xl p-7">
+          <div class="text-yellow-400 tracking-widest">★★★★★</div>
+          <p class="mt-4 text-white/65">“Professional, detailed and welcoming. Easy to see why people keep coming back.”</p>
+          <footer class="mt-5 text-sm text-white/35">Demo review placeholder</footer>
+        </blockquote>
+        <blockquote class="bg-panel border border-white/10 rounded-xl p-7">
+          <div class="text-yellow-400 tracking-widest">★★★★★</div>
+          <p class="mt-4 text-white/65">“One of the best barber experiences in the area. Highly recommended.”</p>
+          <footer class="mt-5 text-sm text-white/35">Demo review placeholder</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-10">
+      <div>
+        <p class="text-barberRed uppercase tracking-[.3em] text-sm font-semibold">Location</p>
+        <h2 class="font-display text-4xl md:text-6xl uppercase mt-2">Come See Us</h2>
+        <p class="text-white/55 mt-5 max-w-xl">Conveniently located on Donelson Pike in Nashville.</p>
+
+        <div class="mt-8 space-y-5 text-white/70">
+          <div>
+            <div class="text-xs text-white/35 uppercase tracking-widest">Address</div>
+            <div class="mt-1 font-semibold">519 Donelson Pike, Nashville, TN 37214</div>
+          </div>
+          <div>
+            <div class="text-xs text-white/35 uppercase tracking-widest">Hours</div>
+            <div class="mt-1">Monday – Saturday: 9:00 AM – 6:00 PM</div>
+            <div>Sunday: Closed</div>
+          </div>
+          <div>
+            <div class="text-xs text-white/35 uppercase tracking-widest">Good to know</div>
+            <div class="mt-1">Walk-ins welcome</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-white/10 min-h-[360px] bg-panel relative">
+        <iframe
+          title="Map to Sal's Barbershop"
+          src="https://www.google.com/maps?q=519%20Donelson%20Pike%2C%20Nashville%2C%20TN%2037214&output=embed"
+          class="absolute inset-0 w-full h-full"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="book" class="py-24">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-barberRed p-8 md:p-14">
+        <div class="absolute -right-16 -top-16 w-64 h-64 rounded-full border-[30px] border-white/10"></div>
+        <div class="relative max-w-3xl">
+          <p class="uppercase tracking-[.3em] text-sm text-white/70">Ready for your next cut?</p>
+          <h2 class="font-display text-4xl md:text-6xl uppercase mt-2">Look Sharp. Feel Confident.</h2>
+          <p class="mt-4 text-white/80">Book online or stop by during business hours. Walk-ins are welcome.</p>
+
+          <div class="mt-7 flex flex-col sm:flex-row gap-4">
+            <a href="#" class="bg-white text-black px-7 py-4 rounded-md font-bold text-center hover:bg-neutral-100 transition">
+              BOOK ON BOOKSY
+            </a>
+            <a href="#location" class="border border-white/40 px-7 py-4 rounded-md font-bold text-center hover:bg-white/10 transition">
+              GET DIRECTIONS
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col md:flex-row gap-6 items-center justify-between">
+      <div>
+        <div class="font-display text-lg">SAL'S BARBERSHOP</div>
+        <div class="text-sm text-white/35">519 Donelson Pike · Nashville, TN</div>
+      </div>
+      <div class="text-sm text-white/35">Concept website demo · Not the official Sal's Barbershop website</div>
+    </div>
+  </footer>
+
+  <script>
+    // Close mobile-style navigation behavior can be added later.
+    // Smooth scroll is handled by CSS.
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
